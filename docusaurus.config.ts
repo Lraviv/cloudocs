@@ -8,24 +8,12 @@ const config: Config = {
   title: 'ClouDocs',
   tagline: 'Documentation for Cloud Services',
   favicon: 'img/cloudio-logo.png',
-  
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://cloudocs',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'cloudio', // Usually your GitHub org/user name.
-  projectName: 'cloudocs', // Usually your repo name.
-
+  organizationName: 'cloudio', 
+  projectName: 'cloudocs', 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -36,42 +24,25 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
+          sidebarPath: './sidebars.ts',editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
+        
       } satisfies Preset.Options,
     ],
   ],
-
+  
   themeConfig: {
     // algolia: {
     //   appId: '1', 
     //   apiKey: '1',
     //   indexName: '1',
     // },
-        // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    search: {
+      // לאופציות מותאמות אישית כאן
+      placeholder: 'חפש...',
+      versioned: true, // אם יש לך גרסאות
+    },
     navbar: {
       title: 'Cloudocs',
       logo: {
@@ -85,12 +56,7 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        
       ],
     },
     footer: {
@@ -142,7 +108,24 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    [
+      require.resolve('docusaurus-plugin-search-local'),
+      {
+        // הגדרות החיפוש
+        hashed: true, // שימור חיפוש עם Hash
+        docsRouteBasePath: '/docs/', // אם הדוקומנטציה שלך בשורש
+        indexDocs: true, // אינדוקס לדוקומנטציה
+        indexPages: true, // אינדוקס לדפים סטטיים
+      },
+    ],
+  ],
 };
+
+
+
 
 export default config;
