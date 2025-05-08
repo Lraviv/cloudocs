@@ -5,10 +5,10 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
-
+  title: 'ClouDocs',
+  tagline: 'Documentation for Cloud Services',
+  favicon: 'img/cloudio-logo.png',
+  
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -17,8 +17,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'cloudio', // Usually your GitHub org/user name.
+  projectName: 'cloudocs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -65,13 +65,18 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    // algolia: {
+    //   appId: '1', 
+    //   apiKey: '1',
+    //   indexName: '1',
+    // },
+        // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Cloudocs',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Cloudocs Logo',
+        src: 'img/cloudio-logo.png',
       },
       items: [
         {
