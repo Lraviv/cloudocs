@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'ClouDocs',
   tagline: 'Documentation for Cloud Services',
-  favicon: 'img/cloudio-logo.png',
+  favicon: '/img/cloudio-logo.png',
   url: 'https://cloudocs',
   baseUrl: '/',
   organizationName: 'cloudio', 
@@ -33,11 +33,6 @@ const config: Config = {
   ],
   
   themeConfig: {
-    // algolia: {
-    //   appId: '1', 
-    //   apiKey: '1',
-    //   indexName: '1',
-    // },
     search: {
       // לאופציות מותאמות אישית כאן
       placeholder: 'חפש...',
@@ -54,7 +49,13 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Docs',
         },
         
       ],
@@ -123,6 +124,10 @@ const config: Config = {
       },
     ],
   ],
+  customFields: {
+    image: '',
+    keywords: [],
+  },
 };
 
 

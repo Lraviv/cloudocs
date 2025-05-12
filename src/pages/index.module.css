@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 0rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -12,7 +12,7 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 0rem;
   }
 }
 
@@ -20,4 +20,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shakeOnHover:hover {
+  animation: shake 0.4s ease-in-out;
 }

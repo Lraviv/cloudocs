@@ -1,11 +1,28 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 0px 0;
+  margin-top: -30px;
   width: 100%;
 }
 
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+searchContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  direction: rtl;
 }

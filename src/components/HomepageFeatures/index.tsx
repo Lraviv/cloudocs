@@ -5,48 +5,46 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  png: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    png: '/img/cloudio-small-pc.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        cloudocs is a docs website that is easy to use and navigate. It is designed to be user-friendly, with a clean and intuitive interface that makes it easy to find the information you need.
       </>
     ),
-  },
+  } ,
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Reliable',
+    png: '/img/cloudio-cloud.png',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The most reliable documentation website for cloud services. It is designed to be fast and responsive, with a focus on performance and reliability.
       </>
     ),
-  },
+    
+  }  ,
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Informative',
+    png: '/img/smallcloudio.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The most informative documentation website for cloud services. It is designed to provide you with all the information you need to get started with cloud services, including tutorials, guides, and reference materials.
       </>
     ),
-  },
+  }  ,
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, png, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <img src={png} alt={title} className={styles.featureSvg} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
