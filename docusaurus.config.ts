@@ -118,7 +118,7 @@ const config: Config = {
       {
         // הגדרות החיפוש
         hashed: true, // שימור חיפוש עם Hash
-        docsRouteBasePath: '/docs/', // אם הדוקומנטציה שלך בשורש
+        docsRouteBasePath: '/', // אם הדוקומנטציה שלך בשורש
         indexDocs: true, // אינדוקס לדוקומנטציה
         indexPages: true, // אינדוקס לדפים סטטיים
       },
